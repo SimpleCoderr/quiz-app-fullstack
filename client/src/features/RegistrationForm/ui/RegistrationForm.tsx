@@ -7,7 +7,7 @@ export const RegistrationForm = () => {
   };
 
   return (
-    <MyForm name="registration" onFinish={onFinish}>
+    <MyForm name="registration" onFinish={onFinish} title="регистрация">
       <Form.Item
         label="Введите Email"
         name="email"

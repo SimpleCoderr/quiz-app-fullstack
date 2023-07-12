@@ -9,19 +9,21 @@ type valuesType = {
 type MyFormProps = {
     children: React.ReactNode;
     name: string;
+    title: string
     onFinish: (values: valuesType) => void
 }
 
-export const MyForm = ({children, ...rest}: MyFormProps) => {
+export const MyForm = ({children, title, ...rest}: MyFormProps) => {
   return (
-    <Form
-    {...rest}
-    labelCol={{span:8}}
-    wrapperCol={{span:16}}
-    style={{maxWidth: 600}}
-    className={s.form}
-    >
-        {children}
-    </Form>
+    <div className={s.formWrapper}>
+      <h2 className={s.formTitle}>{title}</h2>
+      <Form
+      {...rest}
+      labelCol={{span:8}}
+      wrapperCol={{span:16}}
+      >
+          {children}
+      </Form>
+    </div>
   )
 }
