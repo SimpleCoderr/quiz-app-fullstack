@@ -7,8 +7,11 @@ type MyInputProps = {
 }
 
 
-export const MyInput = (props: MyInputProps) => {
+export const MyInput = ({type, ...rest}: MyInputProps) => {
+  if (type === 'password') {
+    return <Input.Password {...rest}/>
+  }
   return (
-    <Input {...props}/>
+    <Input {...rest}/>
   )
 }
