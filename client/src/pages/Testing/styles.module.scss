@@ -1,0 +1,15 @@
+.mainPage {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.headerPage {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}

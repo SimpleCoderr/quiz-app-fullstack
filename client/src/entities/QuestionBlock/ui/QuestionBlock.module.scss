@@ -1,0 +1,17 @@
+@import "app/styles/vars.scss";
+
+.questionBlock {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: solid 1px $mainColor;
+}
+.question {
+  font-size: 20px;
+  font-weight: bold;
+}
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;
+}

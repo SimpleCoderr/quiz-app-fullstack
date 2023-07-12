@@ -1,0 +1,16 @@
+.resultBlock {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 32px;
+    padding: 20px;
+    border: solid grey 2px;
+    border-radius: 10px;
+}
+.resultComment {
+    max-width: 400px;
+   font-style: italic;
+   font-size: 20px;
+   text-align: center;
+}
