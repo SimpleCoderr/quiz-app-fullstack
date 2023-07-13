@@ -1,6 +1,6 @@
 import { PaginationButton } from "entities";
 import { isDisableNextButton } from "../lib/isDisableNextBtn";
-import { useAppDispatch, useTypedSelector } from "shared";
+import { useAppDispatch, useTypedSelector } from "shared/model";
 import { derceasePageAC, increasePageAC } from "../model";
 import s from "./PaginationBlock.module.scss";
 

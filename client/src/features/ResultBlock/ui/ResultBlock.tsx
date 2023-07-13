@@ -1,7 +1,7 @@
 import {Space} from 'antd';
 import { ResultButton } from "entities";
 import { Result } from "entities/Result";
-import { useAppDispatch, useTypedSelector } from "shared";
+import { useAppDispatch, useTypedSelector } from "shared/model";
 import { restartQuizAC, showResultAC } from "../model";
 import { getCountRightAnswer } from "../lib/getCountRightAnswer";
 import CountdownTimer from "entities/CountdownTimer/ui/CountdownTimer";

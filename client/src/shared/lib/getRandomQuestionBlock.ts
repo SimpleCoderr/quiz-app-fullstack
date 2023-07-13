@@ -1,5 +1,5 @@
 import { checkValueInArray } from "./checkValueInArray";
-import { getKeyForValue } from "./getKeyFromValue";
+import { getKeyFromValue} from "./getKeyFromValue";
 import { getNumberFromRange } from "./getNumberFromRange";
 
 const indexesArray: number[] = [];
@@ -26,7 +26,7 @@ export const getRandomQuestionBlock = (
 
   const capital = capitals[randomNumber]; // достаем название столицы по новому уникальному индексу
 
-  const country: string = getKeyForValue(countriesObj, capital); // достаем название страны по названию столицы
+  const country: string = getKeyFromValue(countriesObj, capital); // достаем название страны по названию столицы
 
   const capitalsArray: number[] = [randomNumber]; // пока что кладем правильную столицу страны в первое значение, потом мы его зарандомим
 

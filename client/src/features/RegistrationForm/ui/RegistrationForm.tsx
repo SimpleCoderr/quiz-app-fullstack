@@ -1,5 +1,5 @@
 import { Button, Form, Input } from "antd";
-import { MyForm } from "shared";
+import { MyForm } from "shared/ui";
 
 export const RegistrationForm = () => {
   const onFinish = (values: { email: string; password: string }) => {

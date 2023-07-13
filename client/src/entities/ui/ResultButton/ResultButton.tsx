@@ -1,4 +1,4 @@
-import { MyButton } from "shared";
+import { MyButton } from "shared/ui";
 import { CheckOutlined } from "@ant-design/icons";
 import s from "./ResultButton.module.scss"
 

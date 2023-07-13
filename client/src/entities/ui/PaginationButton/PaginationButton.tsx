@@ -1,4 +1,4 @@
-import { MyButton } from "shared";
+import { MyButton } from "shared/ui";
 
 type PaginationButtonProps = {
   children: string;

@@ -1,7 +1,6 @@
-import { questionBlock } from "shared";
-import { capitalsOfEurope } from "shared/const/capitalsOfEuropeArray";
-import { country } from "shared/const/countryAndCaptalObject";
-import { getRandomQuestionBlock } from "shared/lib/getRandomQuestionBlock";
+import { questionBlock } from "shared/types";
+import { capitalsOfEurope, country } from "shared/const";
+import { getRandomQuestionBlock } from "shared/lib";
 
 type QuizState = {
   questions: questionBlock[];

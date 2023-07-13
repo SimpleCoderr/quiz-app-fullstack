@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useTypedSelector } from "shared";
+import { useTypedSelector } from "shared/model";
 import { publicRoutes } from "./publicRoutes";
 import { privateRoutes } from "./privateRoutes";
 

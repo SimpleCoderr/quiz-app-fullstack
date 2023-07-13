@@ -1,5 +1,5 @@
 import { QuestionBlock } from "entities/QuestionBlock";
-import { useTypedSelector } from "shared";
+import { useTypedSelector } from "shared/model";
 import { getRangeIndexCurrentQuestions } from "../lib/getRangeIndexCurrentQuestions";
 import s from "./QuestionList.module.scss";
 
