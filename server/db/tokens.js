@@ -18,14 +18,12 @@ class TokensTable {
   deleteOne(token) {
     let tokenData;
     this._tokens = this._tokens.filter((write) => {
-      console.log(write.refreshToken)
-      console.log(token)
-        if (write.refreshToken === token) {
-            tokenData = write
-        }
+      if (write.refreshToken === token) {
+        tokenData = write;
+      }
       return write.refreshToken !== token;
     });
-    return tokenData
+    return tokenData;
   }
 }
 
