@@ -1,9 +1,12 @@
 import { Button, Form, Input } from "antd";
+import { useAppDispatch } from "shared/model";
 import { MyForm } from "shared/ui";
+import { login } from "../model/AsyncActions/login";
 
 export const LoginForm = () => {
+  const dispatch = useAppDispatch()
   const onFinish = (values: { email: string; password: string }) => {
-    // console.log(values);
+    dispatch(login(values.email, values.password))
   };
 
   return (
