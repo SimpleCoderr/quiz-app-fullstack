@@ -7,3 +7,5 @@
     1. cd client
     2. npm install
     3. npm start
+
+Проверить созданных юзеров можно по адресу http://localhost:5000/api/users
