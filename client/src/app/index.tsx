@@ -3,6 +3,7 @@ import "./styles/index.scss";
 import AppRouter from "./AppRouter/routes";
 import { Header } from "features/Header";
 import { BrowserRouter } from "react-router-dom";
+import { AlertError } from "entities/AlertError";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <StoreProvider>
           <Header/>
           <AppRouter/>
+          <AlertError/>
         </StoreProvider>
       </BrowserRouter>
     </div>
