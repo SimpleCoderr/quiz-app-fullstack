@@ -59,7 +59,9 @@ class UserController {
       }); // почему-то не работает
       return res.json(userData);
 
-    } catch (e) {}
+    } catch (e) {
+      next(e);
+    }
   }
   async getUsers(req, res, next) {
     try {
