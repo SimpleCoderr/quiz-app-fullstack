@@ -1,9 +1,9 @@
 нужно открыть два терминала:
 1) Команды в первом терминале:
-    cd server
-    npm install
-    npm run dev
+    1. cd server
+    2. npm install
+    3. npm run dev
 2) Команды во втором терминале:
-    cd client
-    npm install
-    npm start
+    1. cd client
+    2. npm install
+    3. npm start
