@@ -23,6 +23,6 @@ export const setAuthAC = (isAuth: boolean) => ({
 });
 
 export const setUserAC = (user: IUser) => ({
-    type: USER_SET,
-    payload: user,
-  });
+  type: USER_SET,
+  payload: user,
+});

@@ -1,9 +1,9 @@
-import { StoreProvider } from "./providers";
-import "./styles/index.scss";
-import AppRouter from "./AppRouter/routes";
-import { Header } from "features/Header";
 import { BrowserRouter } from "react-router-dom";
 import { AlertError } from "entities/AlertError";
+import { Header } from "widgets/Header";
+import AppAuthRouter from "./AppAuthRouter/routes";
+import { StoreProvider } from "./providers";
+import "./styles/index.scss";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <StoreProvider>
           <Header/>
-          <AppRouter/>
+          <AppAuthRouter/>
           <AlertError/>
         </StoreProvider>
       </BrowserRouter>

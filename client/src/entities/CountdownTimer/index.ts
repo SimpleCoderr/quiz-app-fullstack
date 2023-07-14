@@ -1,0 +1,1 @@
+export { CountdownTimer } from 'entities/CountdownTimer/ui/CountdownTimer';

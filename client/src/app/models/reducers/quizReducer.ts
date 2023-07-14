@@ -25,7 +25,10 @@ export const quizReducer = (
     case RESULT_SHOW:
       return { ...state, resultsIsShow: true };
     case QUIZ_RESTART:
-      return {...quizInitialState, answers: new Array(state.questions.length)};
+      return {
+        ...quizInitialState,
+        answers: new Array(state.questions.length),
+      };
     default:
       return { ...state, answers: new Array(state.questions.length) };
     // чтобы в дальнейшем отслеживать ответы на вопросы, нужно иметь массив, размер которого равен количеству вопросов

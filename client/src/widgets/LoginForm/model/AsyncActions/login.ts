@@ -1,21 +1,18 @@
-import axios from "axios";
+import { AppDispatch } from "app/models";
 import {
-  API_URL,
   endLoadingAC,
   setAuthAC,
   setErrorAC,
   setUserAC,
+  startLoadingAC,
 } from "shared/model";
-import { AuthResponse } from "shared/types";
-import { AppDispatch } from "../store/appStore";
+import AuthService from "shared/model/services/AuthService";
 
-export const checkAuth = () => {
+export const login = (email: string, password: string) => {
   return async (dispatch: AppDispatch) => {
+    dispatch(startLoadingAC());
     try {
-      const response = await axios.get<AuthResponse>(`${API_URL}/refresh`, {
-        withCredentials: true,
-      });
-
+      const response = await AuthService.login(email, password);
       localStorage.setItem("token", response.data.accessToken);
       dispatch(setAuthAC(true));
       dispatch(setUserAC(response.data.user));

@@ -1,6 +1,5 @@
-import { Alert } from "antd";
-import { cleanErrorAC, useAppDispatch, useTypedSelector } from "shared/model";
 import { useEffect } from "react";
+import { cleanErrorAC, useAppDispatch, useTypedSelector } from "shared/model";
 import { MyAlert } from "shared/ui";
 import s from "./AlertError.module.scss";
 
@@ -11,8 +10,8 @@ export const AlertError = () => {
   useEffect(() => {
     if (error) {
       setTimeout(() => {
-        dispatch(cleanErrorAC()); // если alert не закроют, то он автоматически скроется через 5 секунд
-      }, 5000);
+        dispatch(cleanErrorAC()); // если alert не закроют, то он автоматически скроется через 3 секунды
+      }, 3000);
     }
   }, [error]);
 

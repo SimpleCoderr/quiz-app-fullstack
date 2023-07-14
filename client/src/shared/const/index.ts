@@ -1,2 +1,2 @@
-export { country } from './countryAndCaptalObject';
+export { country } from "./countryAndCaptalObject";
 export { capitalsOfEurope } from "./capitalsOfEuropeArray";

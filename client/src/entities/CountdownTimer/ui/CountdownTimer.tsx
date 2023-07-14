@@ -10,7 +10,7 @@ type CountdownTimerProps = {
 
 const { Countdown } = Statistic;
 
-const CountdownTimer = ({
+export const CountdownTimer = ({
   numberMinutes,
   onFinish: handleFinish,
 }: CountdownTimerProps) => {
@@ -21,7 +21,10 @@ const CountdownTimer = ({
 
   const msFromTotalMinutes = 1000 * 60 * numberMinutes;
 
-  const deadline = useMemo(() => Date.now() + msFromTotalMinutes, [numberMinutes]);
+  const deadline = useMemo(
+    () => Date.now() + msFromTotalMinutes,
+    [numberMinutes]
+  );
 
   const onFinish: CountdownProps["onFinish"] = () => {
     handleFinish();
@@ -47,5 +50,3 @@ const CountdownTimer = ({
     </div>
   );
 };
-
-export default CountdownTimer;

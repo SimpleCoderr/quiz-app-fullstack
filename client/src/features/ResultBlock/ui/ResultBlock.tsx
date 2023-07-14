@@ -1,10 +1,10 @@
-import {Space} from 'antd';
+import { Space } from "antd";
 import { ResultButton } from "entities";
 import { Result } from "entities/Result";
 import { useAppDispatch, useTypedSelector } from "shared/model";
-import { restartQuizAC, showResultAC } from "../model";
+import { showResultAC } from "../model";
 import { getCountRightAnswer } from "../lib/getCountRightAnswer";
-import CountdownTimer from "entities/CountdownTimer/ui/CountdownTimer";
+import { CountdownTimer } from "entities/CountdownTimer";
 import s from "./ResultBlock.module.scss";
 
 export const ResultBlock = () => {
@@ -18,7 +18,8 @@ export const ResultBlock = () => {
     dispatch(showResultAC());
   };
   const restartQuiz = () => {
-    dispatch(restartQuizAC());
+    window.location.reload(); // перезагружаем, чтобы тест оказался с новыми вопросами
+    // dispatch(restartQuizAC());
   };
 
   const correctAnswers = questions.map((question) => question.correct);
@@ -31,9 +32,9 @@ export const ResultBlock = () => {
           restartQuiz={restartQuiz}
         />
       ) : (
-        <Space align='center'>
+        <Space align="center">
           <ResultButton onClick={showResult} />
-          <CountdownTimer numberMinutes={10} onFinish={showResult}/>
+          <CountdownTimer numberMinutes={10} onFinish={showResult} />
         </Space>
       )}
     </div>

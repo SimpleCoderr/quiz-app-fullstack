@@ -22,7 +22,10 @@ export const Result = ({
 
   return (
     <div className={s.resultBlock}>
-      <ResultInfo countRightAnswer={countRightAnswer} totalCountAnswer={totalCountAnswer}/>
+      <ResultInfo
+        countRightAnswer={countRightAnswer}
+        totalCountAnswer={totalCountAnswer}
+      />
       <div className={s.resultComment}>{resultComment}</div>
       <MyButton
         style={{ fontSize: "28px" }}

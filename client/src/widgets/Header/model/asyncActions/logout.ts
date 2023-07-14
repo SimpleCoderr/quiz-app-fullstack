@@ -8,7 +8,6 @@ export const logout = () => {
         dispatch(startLoadingAC())
         try {
             const response = await AuthService.logout()
-            console.log(response)
             localStorage.removeItem('token')
             dispatch(setAuthAC(false))
             dispatch(setUserAC({} as IUser))

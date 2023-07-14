@@ -14,9 +14,9 @@ export const Header = () => {
   return (
     <header className={s.header}>
       {isLogged ? (
-        <Pannel onLogout={handleLogout} email={user.email}/>
+        <Pannel onLogout={handleLogout} email={user.email} />
       ) : (
-        <NavBlock/>
+        <NavBlock />
       )}
     </header>
   );

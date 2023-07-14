@@ -4,9 +4,9 @@ import { MyForm } from "shared/ui";
 import { login } from "../model/AsyncActions/login";
 
 export const LoginForm = () => {
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
   const onFinish = (values: { email: string; password: string }) => {
-    dispatch(login(values.email, values.password))
+    dispatch(login(values.email, values.password));
   };
 
   return (

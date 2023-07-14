@@ -1,12 +1,12 @@
 import { Button, Form, Input } from "antd";
 import { MyForm } from "shared/ui";
-import { registration } from "../model/asyncActions";
-import { useAppDispatch} from "shared/model";
+import { registration } from "../model";
+import { useAppDispatch } from "shared/model";
 
 export const RegistrationForm = () => {
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
   const onFinish = (values: { email: string; password: string }) => {
-    dispatch(registration(values.email, values.password))
+    dispatch(registration(values.email, values.password));
   };
   return (
     <MyForm name="registration" onFinish={onFinish} title="регистрация">
