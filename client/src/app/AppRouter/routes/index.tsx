@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useAppDispatch, useTypedSelector } from "shared/model";
 import { publicRoutes } from "./publicRoutes";
 import { privateRoutes } from "./privateRoutes";
@@ -15,7 +15,6 @@ const AppRouter = () => {
     }
   }, [])
   return (
-    <BrowserRouter>
       <Routes>
         {isLogged ? (
           <>
@@ -31,7 +30,6 @@ const AppRouter = () => {
           </>
         )}
       </Routes>
-    </BrowserRouter>
   );
 };
 

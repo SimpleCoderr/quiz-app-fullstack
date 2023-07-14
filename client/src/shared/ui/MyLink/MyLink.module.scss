@@ -1,0 +1,40 @@
+$-color--: rgb(170, 170, 170);
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    transition: color .5s;
+    &:hover {
+        color: $-color--;
+    }
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        background-color: $-color--;
+        transition: all .3s;
+        height: 2px;
+        width: 50%;
+        opacity: 0;
+    }
+    &::before {
+        left: -50%;
+        top: -10px;
+    }
+    &:hover::before {
+        opacity: 1;
+        left: 0;
+        top: -5px;
+
+    }
+    &::after {
+        right: -50%;
+        bottom: -10px;
+    }
+    &:hover::after {
+        opacity: 1;
+        bottom: -5px;
+        right: 0;
+    }
+}

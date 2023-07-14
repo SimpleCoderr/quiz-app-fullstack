@@ -10,7 +10,7 @@ export const LoginForm = () => {
   };
 
   return (
-    <MyForm name="registration" onFinish={onFinish} title="вход">
+    <MyForm name="login" onFinish={onFinish} title="вход">
       <Form.Item
         label="Введите Email"
         name="email"
