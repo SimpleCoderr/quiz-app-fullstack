@@ -10,6 +10,7 @@ export const Header = () => {
 
   const handleLogout = () => {
     dispatch(logout());
+    window.location.reload(); // перезагружаем, чтобы тест оказался с новыми вопросами
   };
   return (
     <header className={s.header}>
