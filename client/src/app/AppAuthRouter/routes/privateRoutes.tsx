@@ -1,8 +1,11 @@
 import { IRoute } from "./routeType";
-import { Navigate } from "react-router-dom";
 import { Testing } from "pages/Testing";
+import { NotFound } from "pages/NotFound";
+import { Navigate } from "react-router-dom";
 
 export const privateRoutes: IRoute[] = [
   { path: "/quiz", element: <Testing /> },
-  { path: "*", element: <Navigate replace to="/quiz" /> },
+  {path: "/login", element: <Navigate to="/quiz" replace={true} />},
+  {path: "/registration", element: <Navigate to="/quiz" replace={true} />},
+  { path: "*", element: <NotFound/> },
 ];
