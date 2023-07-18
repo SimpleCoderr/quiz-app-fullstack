@@ -7,7 +7,7 @@ export const logout = () => {
     return async (dispatch: AppDispatch) => {
         dispatch(startLoadingAC())
         try {
-            const response = await AuthService.logout()
+            await AuthService.logout()
             localStorage.removeItem('token')
             dispatch(setAuthAC(false))
             dispatch(setUserAC({} as IUser))
