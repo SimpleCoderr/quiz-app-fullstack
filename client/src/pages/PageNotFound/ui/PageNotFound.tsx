@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import pageNotFound from "../const/img/PageNotFound.png";
-import s from "./NotFound.module.scss";
+import s from "./PageNotFound.module.scss";
 import { useNavigate } from "react-router-dom";
 
-export const NotFound = () => {
+export const PageNotFound = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
