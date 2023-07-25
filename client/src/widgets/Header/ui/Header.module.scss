@@ -9,4 +9,9 @@
   margin-bottom: 50px;
   background-color: $mainColor;
   border-radius: 0 0 10px 10px;
+  @media (max-width: 556px) {
+    margin-bottom: 10px;
+    border-radius: 0;
+    justify-content: center;
+  }
 }

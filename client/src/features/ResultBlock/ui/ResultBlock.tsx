@@ -12,14 +12,15 @@ export const ResultBlock = () => {
     (state) => state.quiz
   );
 
+  const restartQuiz = () => {
+    window.location.reload(); // перезагружаем, чтобы тест оказался с новыми вопросами
+    // dispatch(restartQuizAC());
+  };
+
   const dispatch = useAppDispatch();
 
   const showResult = () => {
     dispatch(showResultAC());
-  };
-  const restartQuiz = () => {
-    window.location.reload(); // перезагружаем, чтобы тест оказался с новыми вопросами
-    // dispatch(restartQuizAC());
   };
 
   const correctAnswers = questions.map((question) => question.correct);
@@ -34,7 +35,6 @@ export const ResultBlock = () => {
       ) : (
         <Space align="center">
           <ResultButton onClick={showResult} />
-          <CountdownTimer numberMinutes={10} onFinish={showResult} />
         </Space>
       )}
     </div>

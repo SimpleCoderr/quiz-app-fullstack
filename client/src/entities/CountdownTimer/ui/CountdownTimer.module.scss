@@ -1,4 +1,7 @@
 .timer {
+  position: fixed;
+  top: 20%;
+  right: 10%;
   height: 100px;
   width: 100px;
   display: flex;
@@ -6,4 +9,8 @@
   justify-content: center;
   border: solid black 2px;
   border-radius: 50%;
+  @media(max-width: 768px) {
+    top: 30%;
+    right: 0;
+  }
 }

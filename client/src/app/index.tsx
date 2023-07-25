@@ -2,9 +2,8 @@ import { AlertError } from "entities/AlertError";
 import { Header } from "widgets/Header";
 import AppAuthRouter from "./AppAuthRouter/routes";
 import { useTypedSelector } from "shared/model";
-import { Spin } from "antd";
-import "./styles/index.scss";
 import { Spinner } from "entities/Spinner";
+import "./styles/index.scss";
 
 function App() {
 
