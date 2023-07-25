@@ -5,7 +5,7 @@ import { getNumberFromRange } from "./getNumberFromRange";
 const indexesArray: number[] = [];
 
 export const getRandomQuestionBlock = (
-  countriesObj: any,
+  countriesObj: object,
   capitals: string[]
 ) => {
   let randomNumber: number;

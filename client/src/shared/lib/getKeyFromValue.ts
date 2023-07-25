@@ -1,3 +1,3 @@
-export const getKeyFromValue = (array: [], value: string) => {
-  return Object.keys(array).find((key: any) => array[key] === value);
+export const getKeyFromValue = <T extends {}>(obj: T, value: string) => {
+  return Object.keys(obj).find((key) => obj[key as keyof T] === value);
 };
