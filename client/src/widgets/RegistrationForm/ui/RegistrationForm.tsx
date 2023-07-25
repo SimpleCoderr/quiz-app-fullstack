@@ -59,7 +59,7 @@ export const RegistrationForm = () => {
       >
         <Input type="password" />
       </Form.Item>
-      <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+      <Form.Item wrapperCol={{ sm: { offset: 8 }, md: { offset: 8 } }}>
         <Button type="primary" htmlType="submit">
           Зарегистрироваться
         </Button>

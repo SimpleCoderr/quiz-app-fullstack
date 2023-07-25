@@ -17,7 +17,7 @@ export const MyForm = ({ children, title, ...rest }: MyFormProps) => {
   return (
     <div className={s.formWrapper}>
       <h2 className={s.formTitle}>{title}</h2>
-      <Form {...rest} labelCol={{ span: 8 }} wrapperCol={{ span: 16 }}>
+      <Form className={s.form} {...rest}>
         {children}
       </Form>
     </div>

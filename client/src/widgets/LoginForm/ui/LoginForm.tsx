@@ -38,7 +38,7 @@ export const LoginForm = () => {
       >
         <Input type="password" />
       </Form.Item>
-      <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+      <Form.Item wrapperCol={{offset: 10}}>
         <Button type="primary" htmlType="submit">
           Войти
         </Button>
