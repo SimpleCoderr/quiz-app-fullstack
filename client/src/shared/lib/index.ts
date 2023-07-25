@@ -1,1 +1,1 @@
-export { getRandomQuestionBlock } from "./getRandomQuestionBlock";
+export { getQuestionsList } from "./getQuestionsList";

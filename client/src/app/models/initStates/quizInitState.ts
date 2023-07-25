@@ -1,6 +1,5 @@
 import { IQuestionBlock } from "shared/types";
-import { capitalsOfEurope, country } from "shared/const";
-import { getRandomQuestionBlock } from "shared/lib";
+import { getQuestionsList } from "shared/lib";
 
 type QuizState = {
   questions: IQuestionBlock[];
@@ -10,14 +9,9 @@ type QuizState = {
   resultsIsShow: boolean;
 };
 
-const questions: IQuestionBlock[] = [];
-
-for (let i = 0; i < 10; i++) {
-  questions.push(getRandomQuestionBlock(country, capitalsOfEurope));
-}
 
 export const quizInitialState: QuizState = {
-  questions,
+  questions: getQuestionsList(10),
   page: 1,
   pageQuantity: 5,
   resultsIsShow: false,
