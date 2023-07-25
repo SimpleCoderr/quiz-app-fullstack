@@ -1,58 +1,62 @@
 import { checkValueInArray } from "./checkValueInArray";
-import { getKeyFromValue} from "./getKeyFromValue";
+import { getKeyFromValue } from "./getKeyFromValue";
 import { getNumberFromRange } from "./getNumberFromRange";
 
 const indexesArray: number[] = [];
 
 export const getRandomQuestionBlock = (
-  countriesObj: object,
+  countries: object,
   capitals: string[]
 ) => {
-  let randomNumber: number;
-
+  let randomIndexCapitalsArr: number;
   let isUniqueIndex: boolean = false;
 
   while (isUniqueIndex === false) {
     // данный цикл ждет новое уникальное значение индекса, чтобы потом вытащить столицу
     isUniqueIndex = true;
-    randomNumber = getNumberFromRange(0, capitals.length);
-    if (checkValueInArray(randomNumber, indexesArray)) {
+    randomIndexCapitalsArr = getNumberFromRange(0, capitals.length);
+    if (checkValueInArray(randomIndexCapitalsArr, indexesArray)) {
       isUniqueIndex = false;
     } else {
-      indexesArray.push(randomNumber);
+      indexesArray.push(randomIndexCapitalsArr);
       break;
     }
   }
 
-  const capital = capitals[randomNumber]; // достаем название столицы по новому уникальному индексу
+  const capital = capitals[randomIndexCapitalsArr];
+  // достаем название столицы по новому уникальному индексу
 
-  const country: string = getKeyFromValue(countriesObj, capital); // достаем название страны по названию столицы
+  const country: string = getKeyFromValue(countries, capital);
+  // достаем название страны по названию столицы
 
-  const capitalsArray: number[] = [randomNumber]; // пока что кладем правильную столицу страны в первое значение, потом мы его зарандомим
+  const indexesCapitalsArray: number[] = [randomIndexCapitalsArr];
+  // пока что кладем правильную столицу страны в первое значение, потом мы его зарандомим
 
-  isUniqueIndex = false;
-
-  while (capitalsArray.length < 4 || isUniqueIndex === false) {
+  while (indexesCapitalsArray.length < 4 || isUniqueIndex === false) {
     isUniqueIndex = true;
     const newRandomNumber: number = getNumberFromRange(0, capitals.length);
-    if (checkValueInArray(newRandomNumber, capitalsArray)) {
+    if (checkValueInArray(newRandomNumber, indexesCapitalsArray)) {
       isUniqueIndex = false;
     } else {
-      capitalsArray.push(newRandomNumber);
+      indexesCapitalsArray.push(newRandomNumber);
       continue;
     }
   }
 
-  const randomIndexOfArray = getNumberFromRange(0, 3);
-  [capitalsArray[0], capitalsArray[randomIndexOfArray]] = [
-    capitalsArray[randomIndexOfArray],
-    capitalsArray[0],
+  const randomIndexOfArray = getNumberFromRange(0, indexesCapitalsArray.length);
+  [indexesCapitalsArray[0], indexesCapitalsArray[randomIndexOfArray]] = [
+    indexesCapitalsArray[randomIndexOfArray],
+    indexesCapitalsArray[0],
   ];
   // рандомим правильному ответу индекс от 0 до 3 и помещаем правильный ответ туда
 
+  const selectedCapitals = indexesCapitalsArray.map(
+    (indexOfCapital) => capitals[indexOfCapital]
+  ); // формируем массив выбранных столиц по массиву выбранных индексов столиц
+
   return {
     question: `Столица страны ${country.replace(/_/g, "-")}: `,
-    variants: capitalsArray.map((indexOfCapital) => capitals[indexOfCapital]),
+    variants: selectedCapitals,
     correct: randomIndexOfArray,
   };
 };
