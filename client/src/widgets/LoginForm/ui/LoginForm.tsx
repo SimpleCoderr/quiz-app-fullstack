@@ -2,22 +2,12 @@ import { Button, Form, Input } from "antd";
 import { useAppDispatch, useTypedSelector } from "shared/model";
 import { MyForm } from "shared/ui";
 import { login } from "../model/AsyncActions/login";
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 export const LoginForm = () => {
   const dispatch = useAppDispatch();
   const onFinish = (values: { email: string; password: string }) => {
     dispatch(login(values.email, values.password));
   };
-  const {isLogged} = useTypedSelector(state => state.app)
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    if(isLogged) {
-      navigate("/quiz")
-    }
-  }, [isLogged])
 
   return (
     <MyForm name="login" onFinish={onFinish} title="вход">

@@ -5,8 +5,7 @@ import { Login } from "pages/Login";
 import { PageNotFound } from "pages/PageNotFound";
 
 export const publicRoutes: IRoute[] = [
-  {path: "/", element: <Navigate to="/login" replace={true} />},
   { path: "/login", element: <Login /> },
   { path: "/registration", element: <Registration /> },
-  { path: "*", element: <PageNotFound/> },
+  { path: "*", element: <Navigate to="/login" replace={true} />},
 ];

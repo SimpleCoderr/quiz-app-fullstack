@@ -1,4 +1,4 @@
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import { useAppDispatch, useTypedSelector } from "shared/model";
 import { publicRoutes } from "./publicRoutes";
 import { privateRoutes } from "./privateRoutes";
@@ -8,7 +8,6 @@ import { checkAuth } from "app/models";
 const AppAuthRouter = () => {
   const { isLogged } = useTypedSelector((state) => state.app);
   const dispatch = useAppDispatch();
-  const navigate = useNavigate()
 
   useEffect(() => {
     if (localStorage.getItem("token")) { // при каждой перезагрузке происходит проверка токена, если он есть - рефрешим его
