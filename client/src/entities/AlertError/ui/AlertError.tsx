@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { cleanErrorAC, useAppDispatch, useTypedSelector } from "shared/model";
 import { MyAlert } from "shared/ui";
-import s from "./AlertError.module.scss";
 
 export const AlertError = () => {
   const { error } = useTypedSelector((state) => state.app);

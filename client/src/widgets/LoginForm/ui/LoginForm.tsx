@@ -1,5 +1,5 @@
 import { Button, Form, Input } from "antd";
-import { useAppDispatch, useTypedSelector } from "shared/model";
+import { useAppDispatch } from "shared/model";
 import { MyForm } from "shared/ui";
 import { login } from "../model/AsyncActions/login";
 
@@ -38,7 +38,7 @@ export const LoginForm = () => {
       >
         <Input type="password" />
       </Form.Item>
-      <Form.Item wrapperCol={{offset: 10}}>
+      <Form.Item wrapperCol={{ offset: 10 }}>
         <Button type="primary" htmlType="submit">
           Войти
         </Button>

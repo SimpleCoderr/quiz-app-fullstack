@@ -9,7 +9,6 @@ type QuizState = {
   resultsIsShow: boolean;
 };
 
-
 export const quizInitialState: QuizState = {
   questions: getQuestionsList(10),
   page: 1,

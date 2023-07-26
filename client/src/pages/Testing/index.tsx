@@ -5,7 +5,7 @@ import s from "./styles.module.scss";
 export const Testing = () => {
   return (
     <div className={s.testing}>
-      <TestingHeader/>
+      <TestingHeader />
       <Quiz />
     </div>
   );

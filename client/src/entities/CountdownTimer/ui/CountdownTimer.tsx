@@ -1,7 +1,7 @@
 import { Statistic } from "antd";
 import type { CountdownProps } from "antd";
-import s from "./CountdownTimer.module.scss";
 import { useMemo, useState } from "react";
+import s from "./CountdownTimer.module.scss";
 
 type CountdownTimerProps = {
   numberMinutes: number;

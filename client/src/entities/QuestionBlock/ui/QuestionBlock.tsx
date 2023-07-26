@@ -1,6 +1,6 @@
 import { Checkbox } from "antd";
 import { CheckboxValueType } from "antd/es/checkbox/Group";
-import { MyCheckbox} from "shared/ui";
+import { MyCheckbox } from "shared/ui";
 import { useAppDispatch } from "shared/model";
 import { changeVariantAC } from "../model";
 import s from "./QuestionBlock.module.scss";

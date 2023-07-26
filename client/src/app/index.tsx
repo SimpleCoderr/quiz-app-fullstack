@@ -6,14 +6,13 @@ import { Spinner } from "entities/Spinner";
 import "./styles/index.scss";
 
 function App() {
-
-  const {isLoading} = useTypedSelector(state => state.app)
+  const { isLoading } = useTypedSelector((state) => state.app);
   return (
     <div className="app">
-          <Header/>
-          <AppAuthRouter/>
-          <AlertError/>
-          {isLoading && <Spinner/>}
+      <Header />
+      <AppAuthRouter />
+      <AlertError />
+      {isLoading && <Spinner />}
     </div>
   );
 }

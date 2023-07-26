@@ -2,8 +2,8 @@ import { useMemo } from "react";
 import { UndoOutlined } from "@ant-design/icons";
 import { getResultComment } from "../lib/getResultComment";
 import { MyButton } from "shared/ui";
-import s from "./Result.module.scss";
 import ResultInfo from "./result-info/ResultInfo";
+import s from "./Result.module.scss";
 
 type ResultProps = {
   countRightAnswer: number;

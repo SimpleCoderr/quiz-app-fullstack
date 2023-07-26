@@ -13,7 +13,7 @@ import { AppDispatch } from "../store/appStore";
 export const checkAuth = () => {
   return async (dispatch: AppDispatch) => {
     try {
-      dispatch(startLoadingAC())
+      dispatch(startLoadingAC());
       const response = await axios.get<AuthResponse>(`${API_URL}/refresh`, {
         withCredentials: true,
       });

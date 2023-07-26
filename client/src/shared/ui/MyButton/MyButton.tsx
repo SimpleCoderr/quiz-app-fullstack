@@ -10,5 +10,9 @@ type MyButtonProps = {
 };
 
 export const MyButton = ({ children, ...rest }: MyButtonProps) => {
-  return <Button {...rest} size="middle">{children}</Button>;
+  return (
+    <Button {...rest} size="middle">
+      {children}
+    </Button>
+  );
 };

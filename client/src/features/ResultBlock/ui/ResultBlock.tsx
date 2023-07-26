@@ -4,7 +4,6 @@ import { Result } from "entities/Result";
 import { useAppDispatch, useTypedSelector } from "shared/model";
 import { showResultAC } from "../model";
 import { getCountRightAnswer } from "../lib/getCountRightAnswer";
-import { CountdownTimer } from "entities/CountdownTimer";
 import s from "./ResultBlock.module.scss";
 
 export const ResultBlock = () => {

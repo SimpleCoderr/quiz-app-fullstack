@@ -1,4 +1,3 @@
-import { MyLink } from "shared/ui/MyLink/MyLink";
 import { NavLink } from "react-router-dom";
 import { useCallback } from "react";
 import s from "./NavBlock.module.scss";

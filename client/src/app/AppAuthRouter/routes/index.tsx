@@ -1,4 +1,4 @@
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useAppDispatch, useTypedSelector } from "shared/model";
 import { publicRoutes } from "./publicRoutes";
 import { privateRoutes } from "./privateRoutes";
@@ -10,7 +10,8 @@ const AppAuthRouter = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (localStorage.getItem("token")) { // при каждой перезагрузке происходит проверка токена, если он есть - рефрешим его
+    if (localStorage.getItem("token")) {
+      // при каждой перезагрузке происходит проверка токена, если он есть - рефрешим его
       dispatch(checkAuth());
     }
   }, []);
