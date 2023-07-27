@@ -1,5 +1,5 @@
 # Приложение КВИЗ
----
+
 ## 🔗 Ссылка на деплой
 [![quiz-app](https://custom-icon-badges.demolab.com/badge/fire-red.svg?logo=fire&logoColor=fff)](https://client-quiz.vercel.app)
 
